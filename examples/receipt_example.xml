@@ -1,86 +1,132 @@
 <FoodRescueReceipt version="0.1">
   <ReportedDateTime>
     <!-- Date in ISO 8601 format -->
+    2013-11-03T01:30:00-07:00
+    <!-- 30 min before end of Pacific Daylight Time on Nov 3, 2013 -->
   </ReportedDateTime>
   <Pickup>
+    <PickupMissedDetails>
+      <!-- Used if the agency missed a scheduled pickup -->
+      <WasPickupMissed>
+        <!-- true or false -->
+        false
+      </WasPickupMissed>
+      <PickupMissedReasonCode>
+        <!--
+        Sick
+        Vehicle problems
+        Donor request
+        Other (Has 100 character limit free-form field for “Explain”)
+        -->
+      </PickupMissedReasonCode>
+      <PickupMissedExplanation>
+        <!-- 100 character free-form input -->
+        <![CDATA[
+        ]]>
+      </PickupMissedExplanation>
+    </PickupMissedDetails>
+
+
     <PickupDateTime>
       <!-- Date in ISO 8601 format -->
+      2013-11-03T01:30:00-08:00
+      <!-- 30 min after end of Pacific Daylight Time on Nov 3, 2013 -->
     </PickupDateTime>
     <PickupId>
+      PICKUPID012345678901
       <!-- alphanumeric, up to 20 characters -->
     </PickupId>
     <TotalPounds>
+      100
       <!-- numeric, 6 chars -->
     </TotalPounds>
 
     <!-- contains 1 to many CategoryPickup elements -->
     <CategoryPickup>
+      <DonationNotReceivedAtPickup>
+        <!-- UI notes: 'No pounds available' checkbox -->
+        <!-- Indicates that Agency went to the pickup but did not get a donation -->
+        <!--
+        If true, transaction is generated with 0 pounds
+        and category, product description, pounds, and storage requirement
+        -->
+        false
+      </DonationNotReceivedAtPickup>
       <TransactionId>
+        TRANSACTIONID0123456
         <!-- alphanumeric, up to 20 characters -->
       </TransactionId>
       <DonationCategory>
-        <OdysseyCode></OdysseyCode>
-        <DisplayName></DisplayName>
+        <OdysseyCode>BP</OdysseyCode>
+        <DisplayName>Bakery</DisplayName>
       </DonationCategory>
       <ProductDescription>
         <!-- alphanumeric, up to 50 characters -->
+        French Bread
       </ProductDescription>
       <Pounds>
         <!-- numeric, 6 characters -->
+        1
       </Pounds>
       <StorageRequirement>
         <!-- 3 options: DRY, REFRIG, FROZEN -->
+        <OdysseyCode>DRY</OdysseyCode>
+        <DisplayName>Dry</DisplayName>
       </StorageRequirement>
     </CategoryPickup>
-
   </Pickup>
 
   <FoodBank>
     <FoodBankId>
+      FB001
       <!-- alphanumeric, up to 5 characters -->
       <!-- (also called A2H Affiliate ID) -->
     </FoodBankId>
 
     <FoodBankName>
+      Fake Food Bank 1
       <!-- alphanumeric, up to 50 characters -->
     </FoodBankName>
   </FoodBank>
 
   <Donor>
     <DonorId>
+      D0001
       <!-- alphanumeric, up to 5 characters -->
       <!-- Optional for local donors -->
     </DonorId>
     <DonorName>
+      Fake Donor 1
       <!-- alphanumeric, up to 25 characters -->
-
     </DonorName>
     <Store>
       <StoreNumber>
         <!-- (also called Warehouse code) -->
+        <!-- alphanumeric, up to 5 characters -->
+        S0001
       </StoreNumber>
       <StoreAddress>
         <StreetAddress>
-          <AddressLine1></AddressLine1>
-          <AddressLine2></AddressLine2>
-          <City></City>
-          <State></State>
-          <Zip5></Zip5>
-          <Zip4></Zip4>
+          <AddressLine1>1234 Main St</AddressLine1>
+          <AddressLine2>Suite 100</AddressLine2>
+          <City>San Jose</City>
+          <State>CA</State>
+          <Zip5>95101</Zip5>
+          <Zip4>0000</Zip4>
         </StreetAddress>
       </StoreAddress>
       <Contacts>
         <Contact order="1">
           <!-- Primary Contact has order=1 -->
-          <Name></Name>
-          <Phone></Phone>
-          <EmailAddress></EmailAddress>
+          <Name>Rosa J. Schneider</Name>
+          <Phone>561-670-1213</Phone>
+          <EmailAddress>RosaJSchneider@rhyta.com</EmailAddress>
         </Contact>
         <Contact order="2">
           <!-- Primary Contact has order=2 -->
-          <Name></Name>
-          <Phone></Phone>
-          <EmailAddress></EmailAddress>
+          <Name>Laurel M. Norris</Name>
+          <Phone>813-295-6469</Phone>
+          <EmailAddress>LaurelMNorris@jourrapide.com</EmailAddress>
         </Contact>
       </Contacts>
     </Store>
@@ -89,34 +135,36 @@
   <Agency>
     <!-- Agency receiving of food donation -->
     <AgencyId>
+      A0001
       <!-- alphanumeric, up to 5 characters -->
     </AgencyId>
 
     <AgencyName>
+      Fake Agency 1
       <!-- alphanumeric, up to 50 characters -->
     </AgencyName>
     <AgencyAddress>
       <StreetAddress>
-        <AddressLine1></AddressLine1>
+        <AddressLine1>3620 Bernardo Street</AddressLine1>
         <AddressLine2></AddressLine2>
-        <City></City>
-        <State></State>
-        <Zip5></Zip5>
+        <City>Tampa</City>
+        <State>FL</State>
+        <Zip5>33610</Zip5>
         <Zip4></Zip4>
       </StreetAddress>
     </AgencyAddress>
     <Contacts>
       <Contact order="1">
         <!-- Primary Contact has order=1 -->
-        <Name></Name>
-        <Phone></Phone>
-        <EmailAddress></EmailAddress>
+        <Name>Dorothy D. Schindler</Name>
+        <Phone>314-324-3651</Phone>
+        <EmailAddress>DorothyDSchindler@armyspy.com</EmailAddress>
       </Contact>
       <Contact order="2">
         <!-- Primary Contact has order=2 -->
-        <Name></Name>
-        <Phone></Phone>
-        <EmailAddress></EmailAddress>
+        <Name>Ronald K. Parker</Name>
+        <Phone>215-423-1740</Phone>
+        <EmailAddress>RonaldKParker@teleworm.us</EmailAddress>
       </Contact>
     </Contacts>
   </Agency>
