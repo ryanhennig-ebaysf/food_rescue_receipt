@@ -1,0 +1,123 @@
+<FoodRescueReceipt version="0.1">
+  <ReportedDateTime>
+    <!-- Date in ISO 8601 format -->
+  </ReportedDateTime>
+  <Pickup>
+    <PickupDateTime>
+      <!-- Date in ISO 8601 format -->
+    </PickupDateTime>
+    <PickupId>
+      <!-- alphanumeric, up to 20 characters -->
+    </PickupId>
+    <TotalPounds>
+      <!-- numeric, 6 chars -->
+    </TotalPounds>
+
+    <!-- contains 1 to many CategoryPickup elements -->
+    <CategoryPickup>
+      <TransactionId>
+        <!-- alphanumeric, up to 20 characters -->
+      </TransactionId>
+      <DonationCategory>
+        <OdysseyCode></OdysseyCode>
+        <DisplayName></DisplayName>
+      </DonationCategory>
+      <ProductDescription>
+        <!-- alphanumeric, up to 50 characters -->
+      </ProductDescription>
+      <Pounds>
+        <!-- numeric, 6 characters -->
+      </Pounds>
+      <StorageRequirement>
+        <!-- 3 options: DRY, REFRIG, FROZEN -->
+      </StorageRequirement>
+    </CategoryPickup>
+
+  </Pickup>
+
+  <FoodBank>
+    <FoodBankId>
+      <!-- alphanumeric, up to 5 characters -->
+      <!-- (also called A2H Affiliate ID) -->
+    </FoodBankId>
+
+    <FoodBankName>
+      <!-- alphanumeric, up to 50 characters -->
+    </FoodBankName>
+  </FoodBank>
+
+  <Donor>
+    <DonorId>
+      <!-- alphanumeric, up to 5 characters -->
+      <!-- Optional for local donors -->
+    </DonorId>
+    <DonorName>
+      <!-- alphanumeric, up to 25 characters -->
+
+    </DonorName>
+    <Store>
+      <StoreNumber>
+        <!-- (also called Warehouse code) -->
+      </StoreNumber>
+      <StoreAddress>
+        <StreetAddress>
+          <AddressLine1></AddressLine1>
+          <AddressLine2></AddressLine2>
+          <City></City>
+          <State></State>
+          <Zip5></Zip5>
+          <Zip4></Zip4>
+        </StreetAddress>
+      </StoreAddress>
+      <Contacts>
+        <Contact order="1">
+          <!-- Primary Contact has order=1 -->
+          <Name></Name>
+          <Phone></Phone>
+          <EmailAddress></EmailAddress>
+        </Contact>
+        <Contact order="2">
+          <!-- Primary Contact has order=2 -->
+          <Name></Name>
+          <Phone></Phone>
+          <EmailAddress></EmailAddress>
+        </Contact>
+      </Contacts>
+    </Store>
+  </Donor>
+
+  <Agency>
+    <!-- Agency receiving of food donation -->
+    <AgencyId>
+      <!-- alphanumeric, up to 5 characters -->
+    </AgencyId>
+
+    <AgencyName>
+      <!-- alphanumeric, up to 50 characters -->
+    </AgencyName>
+    <AgencyAddress>
+      <StreetAddress>
+        <AddressLine1></AddressLine1>
+        <AddressLine2></AddressLine2>
+        <City></City>
+        <State></State>
+        <Zip5></Zip5>
+        <Zip4></Zip4>
+      </StreetAddress>
+    </AgencyAddress>
+    <Contacts>
+      <Contact order="1">
+        <!-- Primary Contact has order=1 -->
+        <Name></Name>
+        <Phone></Phone>
+        <EmailAddress></EmailAddress>
+      </Contact>
+      <Contact order="2">
+        <!-- Primary Contact has order=2 -->
+        <Name></Name>
+        <Phone></Phone>
+        <EmailAddress></EmailAddress>
+      </Contact>
+    </Contacts>
+  </Agency>
+</FoodRescueReceipt>
