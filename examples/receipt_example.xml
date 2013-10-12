@@ -11,18 +11,22 @@
         <!-- true or false -->
         false
       </WasPickupMissed>
-      <PickupMissedReasonCode>
-        <!--
-        Sick
-        Vehicle problems
-        Donor request
-        Other (Has 100 character limit free-form field for “Explain”)
-        -->
-      </PickupMissedReasonCode>
+      <PickupMissedReason>
+        <DisplayName>
+          <!--
+          Sick
+          Vehicle problems
+          Donor request
+          Other
+          -->
+        </DisplayName>
+        <OdysseyCode>
+          <!-- Unspecified -->
+        </OdysseyCode>
+      </PickupMissedReason>
       <PickupMissedExplanation>
-        <!-- 100 character free-form input -->
-        <![CDATA[
-        ]]>
+        <!-- 100 character free-form input for "Other"-->
+        <![CDATA[]]>
       </PickupMissedExplanation>
     </PickupMissedDetails>
 
